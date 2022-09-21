@@ -9,10 +9,10 @@ def load_saved_artifacts():
     print('loading saved artifacts...start')
     global __locations
     global __data_columns
-    with open('./Bengaluru_Houseprice_prediction/model/columns.json','r') as f:
+    with open('./model/columns.json','r') as f:
         __data_columns=json.load(f)['data_columns']
         __locations=__data_columns[3:]
-    with open('./Bengaluru_Houseprice_prediction/model/Begaluru_House_Data.pickle','rb') as f:
+    with open('./model/Begaluru_House_Data.pickle','rb') as f:
         __model =pickle.load(f)   
     print('loading saved artifacts....done')    
 if __name__=='__main__':
